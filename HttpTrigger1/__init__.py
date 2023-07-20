@@ -1,6 +1,5 @@
 import imp
 import logging
-import requests
 import azure.functions as func
 import numpy
 
@@ -25,12 +24,3 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
              status_code=200
         )
 
-try:
-        # call cv2 in same azure function app
-        url = 'https://sam-win-func.azurewebsites.net/api/httptrigger1'
-        response = requests.post( url, json={
-            'name': sam"
-        })
-        logging.info(response.text)
-
-#This is a comment
